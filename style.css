@@ -105,9 +105,9 @@ body{
 }
 
 .card{
-      max-width: 35rem;
+      max-width: 45rem;
       width: 100%;
-      height: 25rem;
+      height: 30rem;
 
       display: flex;
       align-items: center;
@@ -140,11 +140,12 @@ body{
 
 
 .card__result-title{
+      font-size: 1.5rem;
       color: var(--Light-lavender);
 }
 
 .card__score{
-      padding: 2rem;
+      padding: 3rem;
 
       display: flex;
       flex-direction: column;
@@ -162,7 +163,7 @@ body{
 
 .card__score-value{
       line-height: 1;
-      font-size: 4rem;
+      font-size: 5rem;
 
       text-align: center;
       
@@ -175,14 +176,14 @@ body{
 
 
 .card__feedback{
-      font-size: 1.4rem;
+      font-size: 2.4rem;
       color: var(--White); 
 }
 
 
 .card__comment{
       text-align: center;
-      font-size: 0.85rem;
+      font-size: 1.3rem;
       color: var(--Light-lavender);
 }
 
@@ -210,17 +211,28 @@ body{
 }
 
 
+.card__summary-title{
+      font-size: 1.5rem;
+}
+
+
 .card__summary-list{
+      flex-grow: 1;
+
       display: flex;
       flex-direction: column;
+
+      justify-content: space-around;
 
       width: 100%;
 
       gap: 1rem;
+
+      border: 1px solid red;
 }
 
 .points{
-      padding: 0.5rem;
+      padding: 1rem;
 
       display: flex;
       justify-content: space-between;
@@ -259,7 +271,7 @@ body{
 }
 
 .points__name{
-      font-size: 0.8rem;
+      font-size: 1rem;
       font-weight: 800;
 
       display: flex;
@@ -294,7 +306,7 @@ body{
 .point__score-bold{
       margin-right: 0.3rem;
 
-      font-size: 0.8rem;
+      font-size: 1rem;
 
       color: black;
 
@@ -303,7 +315,7 @@ body{
 }
 
 .point__score-opacity{
-      font-size: 0.8rem;
+      font-size: 1rem;
 
       opacity: 0.5;
 
@@ -323,12 +335,12 @@ body{
 
 
 .card__button{
-      font-size: 0.8rem;
+      font-size: 1;
       font-weight: 600;
 
       width: 100%;
 
-      padding: 0.8rem;
+      padding: 1rem;
         
       color: white;
       border-radius: 2rem;
