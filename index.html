@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+      <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+      <link rel="stylesheet" href="style.css">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+       <title>Results summary component</title>
+
+      <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+      <style>
+      .attribution { font-size: 11px; text-align: center; }
+      .attribution a { color: hsl(228, 45%, 44%); }
+      </style>
+
+
+</head>
+
+<body>
+      <p class="error">Il tuo dispositivo non supporta la visualizzazione. Ci dispiace per l'inconveniente.</p>
+      
+      <div class="card">
+
+            <div class="card__results">
+
+                  <h1 class="card__result-title">Your result</h1>
+
+                  <div class="card__score">
+                        <p class="card__score-value">76</p>
+                        <p class="card__score-total">of 100</p>
+                  </div>
+
+                  <h2 class="card__feedback">Great</h2>
+                  <p class="card__comment">You scored higher than 65% of the people who have taken these tests</p>
+
+            </div>
+
+            <div class="card__summary">
+
+                  <h1 class="card__summary-title">Summary</h1>
+
+                  <div class="card__summary-list ">
+
+                        <div class="points points--light-red">
+                              <div>
+                                    <img class="points__logo" src="assets/images/icon-reaction.svg" alt="reaction logo">
+                                    <p class="points__name points__name--red" id="js-reaction">Reaction</p>
+                              </div>
+
+                              <p class="points__score">
+                                    <span class="point__score-bold"  id="js-reaction-score"></span>
+                                    <span class="point__score-opacity">/
+                                    100</span>
+                              </p>                               
+                        </div>
+
+
+                        <div class="points points--orangey-yellow">
+                              <div>
+                                    <img class="points__logo" src="assets/images/icon-memory.svg" alt="memory logo">
+                                    <p class="points__name points__name--orangey" id="js-memory">Memory</p>
+                              </div>
+                                                            
+                              <p class="points__score">
+                                    <span class="point__score-bold"  id="js-memory-score"></span>
+                                    <span class="point__score-opacity">/
+                                    100</span>
+                              </p>                                
+                        </div>
+
+
+                        <div class="points points--green-teal">
+                              <div>
+                                    <img class="points__logo" src="assets/images/icon-verbal.svg" alt="verbal logo">
+                                    <p class="points__name points__name--green" id="js-verbal">Verbal</p>
+                              </div>
+                                                            
+                              <p class="points__score">
+                                    <span class="point__score-bold" id="js-verbal-score"></span>
+                                    <span class="point__score-opacity">/
+                                    100</span>
+                              </p>                              
+                        </div>
+
+
+                        <div class="points points points--cobalt-blue">
+                              <div>
+                                    <img class="points__logo" src="assets/images/icon-visual.svg" alt="visual logo">
+                                    <p class="points__name points__name--blue" id="js-visual">Visual</p>
+                              </div>
+                                                            
+                             <p class="points__score">
+                                    <span class="point__score-bold" id="js-visual-score"></span>
+                                    <span class="point__score-opacity">/
+                                    100</span>
+                              </p>                                
+                        </div>
+
+                  </div>
+
+                  <button class="card__button">Continue</button>
+
+            </div>
+
+      </div>
+
+  
+      <script src="script.js"></script>
+</body>
+
+</html>

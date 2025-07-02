@@ -1,0 +1,618 @@
+:root {
+      /* ## Colors
+
+      ### Primary */
+
+      --Light-red: hsla(0, 100%, 67%, 0.05);
+      --Orangey-yellow: hsla(39, 100%, 56%, 0.05);
+      --Green-teal: hsla(166, 100%, 37%, 0.05);
+      --Cobalt-blue: hsla(234, 85%, 45%, 0.05);
+
+      --Light-red-strong: hsl(0, 100%, 67%);
+      --Orangey-yellow-strong: hsl(39, 100%, 56%);
+      --Green-teal-strong: hsl(166, 100%, 37%);
+      --Cobalt-blue-strong: hsl(234, 85%, 45%);
+
+      /* ## Gradients */
+
+      --Light-slate-blue-background-gradient: hsl(252, 100%, 67%);
+      --Light-royal-blue-background-gradient: hsl(241, 81%, 54%);
+
+      --Violet-blue-circle-gradient: hsla(256, 72%, 46%, 1);
+      --Persian-blue-circle-gradient: hsla(241, 72%, 46%, 0);
+
+
+
+      /* ### Neutral */
+
+      --White: hsl(0, 0%, 100%);
+      --Pale-blue: hsl(221, 100%, 96%);
+      --Light-lavender: hsl(241, 100%, 89%);
+      --Dark-gray-blue: hsl(224, 30%, 27%);
+
+}
+
+/* 1. Reset base */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+}
+
+/* 2. Imposta font base e altezza riga */
+body {
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg-color, white);
+  color: var(--text-color, black);
+}
+
+/* 3. Rimuove decorazioni inutili */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 4. Rende immagini e video reattivi */
+img,
+picture,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 5. Disabilita il default degli input */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* 6. Disabilita lista marker */
+ul,
+ol {
+  list-style: none;
+}
+
+
+
+/* MIO INIZIO */
+
+@media(min-width: 701px){
+
+      .error{
+            display: none;
+      }
+
+body{
+      min-height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: var(--Pale-blue);
+}
+
+.card{
+      max-width: 35rem;
+      width: 100%;
+      height: 25rem;
+
+      display: flex;
+      align-items: center;
+
+      border-radius: 20px;
+
+      box-shadow: 0px 0px 4px 4px hsla(241, 72%, 46%, 0.03);
+
+      background-color: var(--White);
+}
+
+.card__results{
+      flex: 1;
+
+      padding: 2rem 2rem;
+
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 1rem;
+
+      border-radius: 20px;
+      background: linear-gradient(to bottom, var(--Light-slate-blue-background-gradient), var(--Light-royal-blue-background-gradient));
+}
+
+
+.card__result-title{
+      color: var(--Light-lavender);
+}
+
+.card__score{
+      padding: 2rem;
+
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+      align-items: stretch;
+
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+
+      background: linear-gradient(to bottom, var(--Violet-blue-circle-gradient), var(--Persian-blue-circle-gradient));
+      color: var(--White);
+      
+}
+
+.card__score-value{
+      line-height: 1;
+      font-size: 4rem;
+
+      text-align: center;
+      
+}
+
+.card__score-total{
+      text-align: center;
+
+}
+
+
+.card__feedback{
+      font-size: 1.4rem;
+      color: var(--White); 
+}
+
+
+.card__comment{
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--Light-lavender);
+}
+
+
+
+
+.card__summary{
+
+      flex: 1;
+
+      height: 100%;
+      
+
+      padding: 2rem 2rem;
+
+      display: flex;
+      flex-direction: column;
+
+      justify-content: space-between;
+      align-items: flex-start;
+
+      gap: 1.5rem;
+
+      
+}
+
+
+.card__summary-list{
+      display: flex;
+      flex-direction: column;
+
+      width: 100%;
+
+      gap: 1rem;
+}
+
+.points{
+      padding: 0.5rem;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 0.5rem;
+
+      border-radius: 0.5rem;
+}
+
+.points--light-red{
+      background-color: var(--Light-red);
+}
+
+.points--orangey-yellow{
+      background-color: var(--Orangey-yellow);
+}
+
+.points--green-teal{
+      background-color: var(--Green-teal);
+}
+
+.points--cobalt-blue{
+      background-color: var(--Cobalt-blue);
+}
+
+
+.points > div{
+      display: flex;
+
+      gap: 0.3rem;
+}
+
+.points__logo{
+      width: 1rem;
+}
+
+.points__name{
+      font-size: 0.8rem;
+      font-weight: 800;
+
+      display: flex;
+      align-items: center;
+}
+
+.points__name--red{
+      color: var(--Light-red-strong);
+}
+
+.points__name--orangey{
+      color: var(--Orangey-yellow-strong);
+}
+
+.points__name--green{
+      color: var(--Green-teal-strong);
+}
+
+.points__name--blue{
+      color: var(--Cobalt-blue-strong);
+}
+
+
+.points__score{
+      display: flex;
+      align-items: center;
+
+      opacity: 1;
+      font-weight: 900;
+}
+
+.point__score-bold{
+      margin-right: 0.3rem;
+
+      font-size: 0.8rem;
+
+      color: black;
+
+      opacity: 1;
+      font-weight: 900;
+}
+
+.point__score-opacity{
+      font-size: 0.8rem;
+
+      opacity: 0.5;
+
+      color: var(--Dark-gray-blue);
+      font-weight: 900;
+
+      vertical-align: middle;
+
+}
+
+
+
+.point__score-bar{
+      font-weight: 500;
+}
+
+
+
+.card__button{
+      font-size: 0.8rem;
+      font-weight: 600;
+
+      width: 100%;
+
+      padding: 0.8rem;
+        
+      color: white;
+      border-radius: 2rem;
+
+      background: var(--Dark-gray-blue);
+      
+}
+
+.card__button:hover{
+      cursor: pointer; 
+      
+      background: linear-gradient(to bottom, var(--Light-slate-blue-background-gradient), var(--Light-royal-blue-background-gradient));
+}
+
+}
+
+
+
+
+
+
+/*MOBILE DESIGN*/
+
+@media(max-width: 700px){
+
+      .error{
+            display: none;
+      }
+
+      
+      body{
+            min-height: 100vh;
+      }
+      
+      .card{
+            min-height: 100dvh;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            padding-bottom: 1rem;
+
+      }
+
+      .card__results{
+            flex-grow: 1;
+
+            padding: 1rem 2rem;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: space-between;
+            align-items: center;
+
+            /* gap: 1rem; */
+            
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+
+            background: linear-gradient(to bottom, var(--Light-slate-blue-background-gradient), var(--Light-royal-blue-background-gradient));
+
+      }
+
+      .card__results * {
+            text-align: center;
+      }
+
+      .card__result-title{
+            font-size: clamp(1rem, 3vh, 3rem);
+            color: var(--Light-lavender);
+      }
+
+      .card__score{
+
+            padding: 1.6rem;
+
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+
+            background: linear-gradient(to bottom, var(--Violet-blue-circle-gradient), var(--Persian-blue-circle-gradient));
+            color: var(--White);
+      }
+
+      .card__score-value{
+           font-size: clamp(1rem, 7vh, 10rem);
+      }
+
+      .card__score-total{
+            font-size: 1rem;
+            word-spacing: 0.3rem;
+            color: var(--Light-lavender);
+      }
+
+      .card__feedback{
+            font-size: 1.5rem;
+            color: var(--White);
+      }
+
+      .card__comment{
+            color: var(--Light-lavender)
+      }
+
+
+      .card__summary{
+            flex-grow: 3;
+
+             padding-top: 1.5rem;
+             padding-left: 1.5rem;
+             padding-right: 1.5rem;
+
+             display: flex;
+             flex-direction: column;
+             
+             justify-content: space-around;
+
+             gap: 1rem;
+      }
+
+
+
+      .card__summary-list{
+            flex-grow: 1;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: space-around;
+            align-items: center;
+
+            gap: 0.5rem;
+      }
+
+      .points{
+
+            width: 100%;
+
+            padding: 1rem;
+
+
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            border-radius: 10px;
+
+      }
+
+      .points > div{
+            display: flex;
+
+            gap: 1rem;
+      }
+
+      .points--light-red{
+            background-color: var(--Light-red);
+      }
+
+      .points--orangey-yellow{
+            background-color: var(--Orangey-yellow);
+      }
+
+      .points--green-teal{
+            background-color: var(--Green-teal);
+      }
+
+      .points--cobalt-blue{
+            background-color: var(--Cobalt-blue);
+      }
+
+      .points__name--red{
+            color: var(--Light-red-strong);
+      }
+
+      .points__name--orangey{
+            color: var(--Orangey-yellow-strong);
+      }
+
+      .points__name--green{
+            color: var(--Green-teal-strong);
+      }
+
+      .points__name--blue{
+            color: var(--Cobalt-blue-strong);
+      }
+
+
+.points__score{
+      display: flex;
+
+}
+
+.points__score *{
+      display: flex;
+      align-items: center;
+}
+
+
+      
+.point__score-bold{
+      margin-right: 0.3rem;
+
+      font-size: 1.3rem;
+
+      color: black;
+
+      opacity: 1;
+      font-weight: 900;
+}
+
+.point__score-opacity{
+      font-size: 1rem;
+
+      opacity: 0.5;
+
+      color: var(--Dark-gray-blue);
+      font-weight: 900;
+
+      vertical-align: middle;
+
+}
+
+
+
+.point__score-bar{
+      font-weight: 500;
+}
+
+
+
+.card__button{
+      font-size: 0.8rem;
+      font-weight: 600;
+
+      width: 100%;
+
+      padding: 0.8rem;
+        
+      color: white;
+      border-radius: 2rem;
+
+      background: var(--Dark-gray-blue);
+      
+}
+
+
+      .card__button{
+      font-size: 0.8rem;
+      font-weight: 600;
+
+      width: 100%;
+
+      padding: 0.8rem;
+        
+      color: white;
+      border-radius: 2rem;
+
+      background: var(--Dark-gray-blue);
+      
+}
+}
+
+
+
+@media(max-width: 300px){
+      .card{
+            display: none;
+      }
+
+      body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+      }
+
+      .error{
+            display: block;
+            font-size: 1rem;
+            font-weight: 900;
+
+            border: 1px solid red
+      }
+}
